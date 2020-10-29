@@ -2,6 +2,5 @@
 // calls the workout.js file in the Model folder
 
 module.exports = {
-  Workout: require("./workout")
-  
+  Workout: require("./workout") 
 };

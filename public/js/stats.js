@@ -188,11 +188,12 @@ function populateChart(data) {
 
 function duration(data) {
   let durations = [];
-
   data.forEach(workout => {
-    workout.exercises.forEach(exercise => {
-      durations.push(exercise.duration);
-    });
+    if(typeof workout.exercises !== 'undefined'){
+      workout.exercises.forEach(exercise => {
+        durations.push(exercise.duration);
+      });
+    }
   });
 
   return durations;
@@ -202,9 +203,11 @@ function calculateTotalWeight(data) {
   let total = [];
 
   data.forEach(workout => {
-    workout.exercises.forEach(exercise => {
-      total.push(exercise.weight);
-    });
+    if(typeof workout.exercises !== 'undefined'){
+      workout.exercises.forEach(exercise => {
+        total.push(exercise.weight);
+      })
+    }
   });
 
   return total;
@@ -214,9 +217,11 @@ function workoutNames(data) {
   let workouts = [];
 
   data.forEach(workout => {
-    workout.exercises.forEach(exercise => {
-      workouts.push(exercise.name);
-    });
+    if(typeof workout.exercises !== 'undefined'){
+      workout.exercises.forEach(exercise => {
+        workouts.push(exercise.name);
+      });
+    }
   });
   
   return workouts;

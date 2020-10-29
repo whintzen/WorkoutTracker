@@ -1,10 +1,11 @@
 const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
+const path = require("path");
+const PORT = process.env.PORT || 3000;
+// const PORT = process.env.PORT || 8080;
 
-// const PORT = process.env.PORT || 3000;
-const PORT = process.env.PORT || 8080;
-
+const Workout = require("./models/workout.js");
 const db = require("./models");
 
 const app = express();
@@ -16,63 +17,24 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", { useNewUrlParser: true, useFindAndModify: false, useUnifiedTopology: true });
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", { useNewUrlParser: true, useFindAndModify: false });
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", { 
+  useNewUrlParser: true, useFindAndModify: false, useUnifiedTopology: true, useCreateIndex: true 
+});
 
-// db.Library.create({ name: "Campus Library" })
-//   .then(dbLibrary => {
-//     console.log(dbLibrary);
-//   })
-//   .catch(({message}) => {
-//     console.log(message);
-//   });
-
-// app.post("/submit", ({body}, res) => {
-//   db.Book.create(body)
-//     .then(({_id}) => db.Library.findOneAndUpdate({}, { $push: { books: _id } }, { new: true }))
-//     .then(dbLibrary => {
-//       res.json(dbLibrary);
-//     })
-//     .catch(err => {
-//       res.json(err);
-//     });
-// });
-
-// app.get("/books", (req, res) => {
-//   db.Book.find({})
-//     .then(dbBook => {
-//       res.json(dbBook);
-//     })
-//     .catch(err => {
-//       res.json(err);
-//     });
-// });
-
-// app.get("/library", (req, res) => {
-//   db.Library.find({})
-//     .then(dbLibrary => {
-//       res.json(dbLibrary);
-//     })
-//     .catch(err => {
-//       res.json(err);
-//     });
-// });
-
-// app.get("/populated", (req, res) => {
-//   db.Library.find({})
-//     .populate("books")
-//     .then(dbLibrary => {
-//       res.json(dbLibrary);
-//     })
-//     .catch(err => {
-//       res.json(err);
-//     });
-// });
 
 // Routes
 // =============================================================
 require("./routes/htmlRoutes.js")(app);
 require("./routes/apiRoutes.js")(app);
+
+// var htmlRoutes = require("./routes/htmlRoutes");
+// app.use(htmlRoutes);
+
+// var apiRoutes = require("./routes/apiRoutes");
+// app.use(apiRoutes);
+
+// var workoutRoutes = require("./models/workout")
+// app.use(workoutRoutes)
 
 app.listen(PORT, () => {
   console.log(`App listening on port ${PORT}!`);

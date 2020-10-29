@@ -1,8 +1,10 @@
 var path = require("path");
+const  Workout  = require("../models");
 
 module.exports = function(app) {
   //Get all the excercises 
-  app.get("*", function(req, res) {
+  // app.get("*", function(req, res) {
+    app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/index.html"));
   });
 
