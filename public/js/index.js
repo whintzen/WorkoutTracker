@@ -1,3 +1,4 @@
+//Fetch data from back end
 init();
 
 async function init() {
