@@ -1,3 +1,4 @@
+//This is a front end file that calls the api for getting the workings, either adding or creating
 const API = {
   async getLastWorkout() {
     let res;
