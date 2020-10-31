@@ -1,19 +1,18 @@
+//Serve these tot he browser
 var path = require("path");
-const  Workout  = require("../models");
 
 module.exports = function(app) {
-  //Get all the excercises 
-  // app.get("*", function(req, res) {
-    app.get("/", function(req, res) {
+  //Get and displays all the excercises 
+  app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/index.html"));
   });
 
-  //Get specific exercises
+  //Get and displays specific exercises
   app.get("/exercise", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/exercise.html"));
   });
   
-  //Get the stats
+  //Get and displays the stats
   app.get("/stats", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/stats.html"));
   });

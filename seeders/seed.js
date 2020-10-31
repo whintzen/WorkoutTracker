@@ -1,3 +1,4 @@
+// This file will insert a few records into the database
 let mongoose = require("mongoose");
 let db = require("../models");
 
