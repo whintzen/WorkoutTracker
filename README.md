@@ -17,11 +17,12 @@ Workout Tracker is a workout app that lets users track their workouts.  It is be
   database to refresh itself by deleting any old records/data and pre-populate the database with 9 records to start with.  
 * Run `node server.js`, this will connect you to
   the Mongo Robo 3T database on server PORT 3000.  Open a browser and type `http://localhost:3000/` or `localhost:3000` and hit enter.  
-  * Home Page: 
-    The Home Page will display the **Last workout** completed and when it was. A button to **Enter a new Workout** and another button to **Continue Workout** (this one is used after you have started a workout and did not complete).  In the upper left corner, there are two buttons, **Fitness Tracker** which when clicked, brings you back to the Home Page and **Dashboard**, which when clicked, will display the statistics of the user workout efforts.
+  **Home Page:** 
+    * The Home Page will display the **Last workout** completed and when it was. A button to 
+      **Enter a new Workout** and another button to **Continue Workout** (this one is used after you have started a workout and did not complete).  In the upper left corner, there are two buttons, **Fitness Tracker** which when clicked, brings you back to the Home Page and **Dashboard**, which when clicked, will display the statistics of the user workout efforts.
 
-  * Enter Workout:
-    Select **New Workout** and choose either Cardio or Resistance.   
+  **Enter Workout:**
+    * Select **New Workout** and choose either Cardio or Resistance.   
       * Cardio: 
         * Enter the following information; 
           * Name of the Exercise (e.g running or jogging) 
@@ -39,9 +40,9 @@ Workout Tracker is a workout app that lets users track their workouts.  It is be
 
   These excercises can be Cardio or Resistance only on a given day or it can be a combination of Cardio and Resistance workouts. If the exercise is complete for the day, the user will select the **Complete** button
     
-  * Dashboard:
-    The left side of the dashboard will display a line graph showing the number of workout minutes per day.  The
-    right side of the dashboard displays the number of pounds used in the resistance workouts per day.  To go back to the home page from the Dashboard page, click the link in the upper left corner.     
+  **Dashboard:**
+    * The left side of the dashboard will display a line graph showing the number of workout minutes per day.  The 
+      right side of the dashboard displays the number of pounds used in the resistance workouts per day.  To go back to the home page from the Dashboard page, click the link in the upper left corner.     
 
 ## Tools:
  * Node
