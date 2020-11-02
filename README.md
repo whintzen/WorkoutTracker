@@ -1,4 +1,4 @@
-# Workout Tracker  :running_woman: :weight_lifting_woman:
+# :running_woman: Workout Tracker  :weight_lifting_woman:
 
 Mongo Database
 A workout tracker that uses Mongo database, Mongoose schema, and handle routes with Express.  Workout Tracker app uses Node, Mongoose and Mongodb to query and route data in the app, and HTML to display the data.
@@ -16,7 +16,8 @@ Workout Tracker is a workout app that lets users track their workouts.  It is be
 * Run `npm run seed`, as this will allow the mongo
   database to refresh itself by deleting any old records/data and pre-populate the database with 9 records to start with.  
 * Run `node server.js`, this will connect you to
-  the Mongo Robo 3T database on server PORT 3000.  Open a browser and type `http://localhost:3000/` or `localhost:3000` and hit enter.  
+  the Mongo Robo 3T database on server PORT 3000.  Open a browser and type `http://localhost:3000/` or `localhost:3000` and hit enter.
+    
   **Home Page:** 
     * The Home Page will display the **Last workout** completed and when it was. A button to 
       **Enter a new Workout** and another button to **Continue Workout** (this one is used after you have started a workout and did not complete).  In the upper left corner, there are two buttons, **Fitness Tracker** which when clicked, brings you back to the Home Page and **Dashboard**, which when clicked, will display the statistics of the user workout efforts.
@@ -50,7 +51,8 @@ Workout Tracker is a workout app that lets users track their workouts.  It is be
  * Mongoose schema
  * Mongodb - in order to load and store the
    Workout Tracker data 
- * Models        
+ * Models
+ * Javascript        
  * Package json 
  * CSS
  * HTML 
