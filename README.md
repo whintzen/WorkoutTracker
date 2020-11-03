@@ -62,10 +62,10 @@ Workout Tracker is a workout app that lets users track their workouts.  It is be
     [Github](https://github.com/whintzen/WorkoutTracker)
   
   * Display App in Heroku
-    [Heroku App](https://infinite-forest-28500.herokuapp.com/)
+    [Heroku App](https://tranquil-hollows-72169.herokuapp.com/)
 
   * Screencastify video: 
-    [Video](https://drive.google.com/file/d/1RWtuk18CH5-SxUaRS9qCbb2eEGsJiuE9/view?usp=sharing)
+    [Video](https://drive.google.com/file/d/1qPucW9dygXc6jTb7LJF6zhm_tpIIAUVl/view?usp=sharing)
 
   * Workout Tracker App Images
      ![Image of The Hamburger App](https://github.com/whintzen/WorkoutTracker/blob/master/images/Workout_Tracker_Homepage.jpg)
